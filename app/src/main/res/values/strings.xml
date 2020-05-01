@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Money Tracker</string>
-    <string name="add_item_tiitle">Новая запись</string>
+    <string name="add_item_title">Новая запись</string>
     <string name="add_item_name">Название</string>
 </resources>

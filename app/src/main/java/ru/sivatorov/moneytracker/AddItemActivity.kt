@@ -20,7 +20,7 @@ class AddItemActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_additem)
 
-        setTitle(R.string.add_item_tiitle)
+        setTitle(R.string.add_item_title)
 
         var name: EditText = findViewById(R.id.name)
         var price: EditText = findViewById(R.id.price)
