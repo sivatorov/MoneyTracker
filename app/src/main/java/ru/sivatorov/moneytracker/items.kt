@@ -1,6 +1,6 @@
 package ru.sivatorov.moneytracker
 
-class Record {
+class items {
     private final var title: String = ""
     private final var price: Int = 0
     private var comment: String = ""
