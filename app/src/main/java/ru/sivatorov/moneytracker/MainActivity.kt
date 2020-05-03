@@ -1,44 +1,23 @@
 package ru.sivatorov.moneytracker
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager.widget.ViewPager
+import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.i("MainActivity", "onCreate")
-    }
+        var pager = findViewById<ViewPager>(R.id.viewPager)
 
-    override fun onStart() {
-        super.onStart()
-        Log.i("MainActivity", "onStart")
-    }
+        var tabLayout = findViewById<TabLayout>(R.id.tabLayout)
 
-    override fun onResume() {
-        super.onResume()
-        Log.i("MainActivity", "onResume")
-    }
+        var adapter: MainPagesAdapter = MainPagesAdapter(supportFragmentManager, this)
+        pager.adapter = adapter
 
-    override fun onPause() {
-        super.onPause()
-        Log.i("MainActivity", "onPause")
-    }
 
-    override fun onStop() {
-        super.onStop()
-        Log.i("MainActivity", "onStop")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.i("MainActivity", "onRestart")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.i("MainActivity", "onDestroy")
+        tabLayout.setupWithViewPager(pager)
     }
 }
