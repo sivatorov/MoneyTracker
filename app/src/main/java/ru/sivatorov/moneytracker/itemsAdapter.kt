@@ -14,7 +14,6 @@ class itemsAdapter(private val values: List<items>) :
     override fun getItemCount() = values.size
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        Log.i(TAG, "onBindViewHolder " + position)
         var items: items = values[position]
         holder.applyData(items)
     }
@@ -33,8 +32,6 @@ class itemsAdapter(private val values: List<items>) :
         var price = itemView.findViewById<TextView>(R.id.price)
 
         public fun applyData(items: items) {
-            Log.i(TAG, items.getTitle())
-
             title.text = items.getTitle()
             price.text = items.getPrice().toString() + " ₽"
         }

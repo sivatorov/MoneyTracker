@@ -5,10 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-public var TAG: String = "ZvthH"
 class ItemListActivity : AppCompatActivity() {
-
-//    public var mData: List<Record> = createData()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_itemslist)
@@ -16,10 +13,7 @@ class ItemListActivity : AppCompatActivity() {
         val recycler: RecyclerView = findViewById(R.id.list)
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = itemsAdapter(list)
-
-
     }
-
 
     private fun createData(): List<items> {
         val values = arrayListOf<items>()
@@ -50,8 +44,6 @@ class ItemListActivity : AppCompatActivity() {
         values.add(items("Шкаф", 100))
         return values
     }
-
-
 }
 
 
